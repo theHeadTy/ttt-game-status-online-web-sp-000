@@ -37,11 +37,11 @@ def won?(board)
     #c_arr = [c1, c2, c3]
     c_arr = c
     
-    if (c_arr & turns[:x]).length == 3
-     check_x = c_arr
+    if (c & turns[:x]).length == 3
+     check_x = c
      break
-    elsif (c_arr & turns[:o]).length == 3
-      check_o = c_arr
+    elsif (c & turns[:o]).length == 3
+      check_o = c
       break
     end
     
