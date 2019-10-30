@@ -72,13 +72,11 @@ end
 
 def over?(board)
   
-  return (won?(board) or draw(board)) ? true : false
-  
-  #if won?(board) or draw?(board)
-  #  return true
-  #else
-  #  return false
-  #end
+  if won?(board) or draw?(board)
+    return true
+  else
+    return false
+  end
     
   # return true for draw
   # return true for game won with full board
@@ -96,7 +94,7 @@ def winner(board)
   combos = WIN_COMBINATIONS
   turns = turn_arr(board)
   x = 0
-  combos.each do |c|
+  combos.select.with_index do |c, ci|
     if (c & turns[:x]).length == 3
       break 'X'
     elsif (c & turns[:o]).length == 3
