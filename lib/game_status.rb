@@ -100,7 +100,7 @@ def winner(board)
       break 'O'
     end
     x += 1
-    break nil if combos.count == x
+    break nil if combos.count >= x
   end
 end
 
