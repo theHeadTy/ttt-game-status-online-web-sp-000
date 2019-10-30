@@ -14,6 +14,7 @@ WIN_COMBINATIONS = [
     [6, 4, 2]
   ]
 
+# helper to seperate x pos & y pos into object to compare between win combos.
 def turn_arr(board)
   { 
     x: board.each_index.select { |x| board[x] == 'X' },
@@ -130,5 +131,5 @@ won?(["X", " ", "O", " ", "X", "O", " ", " ", "X"])
 # right diagnal win
 won?(["X", " ", "O", "X", "O", " ", "O", " ", " "])
 
-winner(["X", " ", " ", " ", "X", " ", " ", " ", "X"])
+#winner(["X", " ", " ", " ", "X", " ", " ", " ", "X"])
 
