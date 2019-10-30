@@ -46,6 +46,7 @@ def won?(board)
     
   end
   
+  # easily could create winner('x') / winner('o') to print out winner
   if !check_x.nil?
     return check_x
   elsif !check_o.nil?
