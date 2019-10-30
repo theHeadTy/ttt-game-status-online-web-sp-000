@@ -98,9 +98,11 @@ def winner(board)
       break 'X'
     elsif (c & turns[:o]).length == 3
       break 'O'
+    else
+      break nil
     end
     x += 1
-    break nil if combos.count >= x
+    #break nil if combos.count == x
   end
 end
 
