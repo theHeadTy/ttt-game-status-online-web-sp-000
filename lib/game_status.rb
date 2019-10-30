@@ -93,14 +93,14 @@ def winner(board)
   combos = WIN_COMBINATIONS
   turns = turn_arr(board)
   x = 0
-  combos.each do |c|
+  combos.select.with_index do |c, ci|
     if (c & turns[:x]).length == 3
       break 'X'
     elsif (c & turns[:o]).length == 3
       break 'O'
     end
     x += 1
-    break nil if combos.count == x
+    break nil if combos.count == ci
   end
 end
 
