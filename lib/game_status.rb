@@ -33,10 +33,6 @@ def won?(board)
   check_o = nil
   
   combos.each do |c|
-
-    #c_arr = [c1, c2, c3]
-    c_arr = c
-    
     if (c & turns[:x]).length == 3
      check_x = c
      break
