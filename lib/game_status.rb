@@ -71,18 +71,17 @@ def draw?(board)
 end
 
 def over?(board)
+
+  # return true for draw
+  # return true for game won with full board
+  # return true for game won with non-full board
+  # return false for an in-progress game
   
   if won?(board) or draw?(board)
     return true
   else
     return false
   end
-    
-  # return true for draw
-  # return true for game won with full board
-  # return true for game won with non-full board
-  # return false for an in-progress game
-    
 end
 
 def winner(board)
