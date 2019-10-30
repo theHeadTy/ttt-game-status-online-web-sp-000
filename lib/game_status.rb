@@ -96,7 +96,7 @@ def winner(board)
   combos = WIN_COMBINATIONS
   turns = turn_arr(board)
   x = 0
-  combos.select.with_index do |c|
+  combos.each_with_index do |c|
     if (c & turns[:x]).length == 3
       break 'X'
     elsif (c & turns[:o]).length == 3
