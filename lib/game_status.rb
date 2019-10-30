@@ -71,7 +71,7 @@ end
 
 def over?(board)
   
-  won?(board) or draw?(board) ? true : false
+  if won?(board) or 
     
   # return true for draw
   # return true for game won with full board
