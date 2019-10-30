@@ -44,7 +44,6 @@ def won?(board)
       check_o = c
       break
     end
-    
   end
   
   # easily could add winner('x') / winner('o') to print out winner
