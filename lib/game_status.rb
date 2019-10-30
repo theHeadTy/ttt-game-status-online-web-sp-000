@@ -32,9 +32,10 @@ def won?(board)
   check_x = nil
   check_o = nil
   
-  combos.each do |c1, c2, c3|
+  combos.each do |c|
 
-    c_arr = [c1, c2, c3]
+    #c_arr = [c1, c2, c3]
+    c_arr = c
     
     if (c_arr & turns[:x]).length == 3
      check_x = c_arr
@@ -61,13 +62,12 @@ end
   
 def draw?(board)
   
-  return !won?(board) && full?(board) ? true : false
-  
   # return true for draw
   # return false for game won top row
   # return false for game won diagnaly
   # return false for in progress game
   
+  return !won?(board) && full?(board) ? true : false
 end
 
 def over?(board)
